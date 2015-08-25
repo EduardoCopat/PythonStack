@@ -26,5 +26,13 @@ class TestStack(unittest.TestCase):
         self.assertEqual(self.stack.pop(), "b")
         self.assertEqual(self.stack.size(), 1)
 
+    def test_two_pushes_two_pop(self):
+        self.stack.push("a")
+        self.stack.push("b")
+        self.stack.pop()
+
+        self.assertEqual(self.stack.pop(), "a")
+        self.assertEqual(self.stack.size(), 0)
+
 
 

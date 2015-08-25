@@ -3,14 +3,14 @@ __author__ = 'Eduardo'
 class Stack(object):
 
     def __init__(self):
-        self.stack_size = 0
+        self.elements = []
 
     def push(self, element):
-        self.stack_size += 1
+        self.elements.append(element)
 
     def pop(self):
-        self.stack_size -= 1
-        return "b"
+        return self.elements.pop()
 
     def size(self):
-        return self.stack_size
+        return len(self.elements)
+
