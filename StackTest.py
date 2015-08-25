@@ -2,6 +2,7 @@ __author__ = 'Eduardo'
 
 import unittest
 from Stack import Stack
+from EmptyStackException import EmptyStackException
 
 
 
@@ -33,6 +34,11 @@ class TestStack(unittest.TestCase):
 
         self.assertEqual(self.stack.pop(), "a")
         self.assertEqual(self.stack.size(), 0)
+
+    def test_empty_pop(self):
+        self.assertRaises(EmptyStackException, self.stack.pop())
+
+
 
 
 
