@@ -1,4 +1,4 @@
 __author__ = 'Eduardo'
 
-class EmptyStackException(Exception):
+class EmptyStackException(IndexError):
     pass
