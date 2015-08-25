@@ -36,7 +36,10 @@ class TestStack(unittest.TestCase):
         self.assertEqual(self.stack.size(), 0)
 
     def test_empty_pop(self):
-        self.assertRaises(EmptyStackException, self.stack.pop())
+        with self.assertRaises(EmptyStackException):
+            self.stack.pop()
+
+
 
 
 

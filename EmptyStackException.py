@@ -1,4 +1,6 @@
 __author__ = 'Eduardo'
 
 class EmptyStackException(IndexError):
-    pass
+    def __init__(self):
+        super(EmptyStackException, self).__init__()
+
